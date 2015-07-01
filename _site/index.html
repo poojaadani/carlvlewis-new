@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Lanyon &middot; A Jekyll theme
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+    <a class="sidebar-nav-item" href="">GitHub project</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Lanyon</a>
+            <small>A Jekyll theme</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//blog/2014/07/16/using-cartodb-2-0-geocode-private-prisons-comparison-state-state-incarceration-rates/">
+        Using CartoDB 2.0 to geocode private prisons in comparison to state-by-state incarceration rates
+      </a>
+    </h1>
+
+    <span class="post-date">16 Jul 2014</span>
+
+    <img src="/assets/Screen-Shot-2014-08-20-at-11.21.51-AM.png">
+<p>The <a href="http://carlvlewis.net/visualizing-latest-census-estimates-using-cartodb-and-leaflet/" target="_blank">last post</a> I wrote about <a href="http://cartodb.com" target="_blank">CartoDB </a>used the CartoDB API and <a href="http://leaflet.js" target="_blank">Leaflet.js</a> to produce a hover tooltip map of census data. Looking back, while it's quite useful to learn CartoDB's API, it's now possible to achieve those same visual cues and interactivity without spending time wading through complex, undocumented JavaScript. You can now do everything I did <a href="http://carlvlewis.net/visualizing-latest-census-estimates-using-cartodb-and-leaflet/" target="_blank">here</a> using little more than CartoDB's frontend CMS.<!--more--></p>
+<p>So, when I ran across <a href="https://www.dropbox.com/s/arkyewfj6z5psa6/enigma-enigma-prisons-all-facilities-7215ee9c7d9dc229d2921a40e899ec5f%20%281%2906.03.01%20AM.csv" target="_blank">this database </a>of all prisons and correctional facilities in the nation on <a href="http://enigma.io" target="_blank">Enigma.io</a>, I used the dataset to put together this visualization displaying all 137 <em>private </em>prisons and correctional facilities – all of which are  owned entirely by just five different private enterprises – and then added a simple chloropleth layer displaying incarceration rates by state underneath.</p>
+<p>Can't see what's going on too well at the resolution below? Here's a standalone package:<br />
+[su_heading size="25"]<a href="http://carlvlewis.net/private-prisons" target="_blank">Click here to view the project live</a>[/su_heading]<br />
+<em>(yes, it's responsive!)</em></p>
+<p><iframe src="//carlvlewis.cartodb.com/viz/d785d444-0cb0-11e4-b8bc-0e230854a1cb/embed_map?title=false&amp;description=false&amp;search=false&amp;shareable=true&amp;cartodb_logo=true&amp;layer_selector=true&amp;legends=true&amp;scrollwheel=true&amp;fullscreen=true&amp;sublayer_options=1%7C1&amp;sql=&amp;zoom=3&amp;center_lat=37.92686760148135&amp;center_lon=-85.869140625" width="100%" height="520" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><em><br />
+</em><br />
+This visualization is a case in which deeper statistical analysis and consideration of multiple variables would've bolstered the possible argument that private prisons lead to higher incarceration rates, if such a claim is true, that is (i.e., determining a statistically significant correlation between number of inmates in each state with the number of private prisons or correctional facilities located there). <!--more--></p>
+<p>Such a <a href="http://journal.radicalcriminology.org/index.php/rc/article/view/44/html" target="_blank">data-driven study of the private prison industry </a>conducted by U.C. Berkely Ph.D. student Chris Petrella concluded that blacks are disproportionately incarcerated in private prisons as opposed to public jails.</p>
+<p>A similar methodology could be applied to private prison populations in general, as many private prisons are required by state or local law to have a minimum quota of around 90 to 95 percent occupancy to keep their government contracts. It would be interesting, too, to visualize that data in a manner more easily accesible to the average user than an academic research journal.</p>
+<h2><strong>Tools I would've used before new CartoDB:</strong></h2>
+<ul>
+<li>Batch geocode by <a href="http://www.findlatitudeandlongitude.com/batch-geocode/#.U8ZZY41dUd9" target="_blank">findlatitudelongitude</a> to geocode the address data into lat/long coordinates.</li>
+<li><a href="http://colorbrewer2.org" target="_blank">ColorBrewer2.org </a>to find equidistant color scales.</li>
+<li>Locating .shp, .kml or .geojson polygons for the U.S. states.</li>
+<li>Excel to merge tables and bind geographic with numeric data.</li>
+<li>A custom JavaScript powered control panel – like <a href="http://multimedia.savannahnow.com/media/restaurants/maps/savannahchatham.html#.U8Zbg41dUd8" target="_blank">the one I used here</a> – to categorize the locations by owner.</li>
+<li>Leaflet.js</li>
+<li>MapBox</li>
+<li>Who knows?</li>
+</ul>
+<h3>All of those tasks are automated in the new CartoDB!</h3>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//blog/2014/07/04/using-plotly-analyze-visualize-data-variety-interactive-charts-graphs/">
+        Using plotl.y to analyze and visualize data in variety of interactive charts, graphs
+      </a>
+    </h1>
+
+    <span class="post-date">04 Jul 2014</span>
+
+    <p><iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~carlvlewis/6.embed?width=640&height=480"></iframe></p>
+<p>It's been a while since I've had the leisure to play with new <a href="https://github.com/carlvlewis/carlvlewis.github.com-fltimesunion/commit/0f38d526650b24a006f94a3d5549b3a64248a917?short_path=77062ad#diff-77062ade2810a886dd4dc035a83ed744">open-source tools for data journalism.</a> It's been even longer since I've written a tutorial. Today I wanted to explore a fairly WYSIWYG web app <a href="http://plotly.com" target="_blank">Plotly</a>. Although most of the features on face value appear to be not much more than what you can do in Google Visualization Playground or an open-source library like Highcharts.js – basic chart types on-the-fly, hover interactions – what particularly stands out about Plotly is its ability to perform many of the statistical analyses to your dataset before you go through the process of visualizing it.</p>
+<p>For example, you can calculate percent change from a set of chronological raw numbers to display accurate trend data by simply choosing "Data Analysis&gt;Percent Change" in the Grid View. I tried this out with some historical data scraped by the folks at <a href="http://enigma.io" target="_blank">enigma.io</a> on the percentage of the Savannah-area workforce in the hospitality industry, even adding in a fit or "trend" line to verify the upward tick:<br />
+<!--more--><br />
+As you can see, plot.ly lets the user easily add in annotations explaining the data. Granted, this could be accomplished using <a href="http://highcharts.js" target="_blank">other tools</a>, as well, but not so seamlessly. The user interface is a little cumbersome, and is still in beta. But judging by my experiences, this is a quicker solution than a JavaScript library and a more feature-rich choice than Google Charts.</p>
+<p>Just to give you an idea of the full range of more than 45 different standard chart types, I put together this slick heat map displaying the average unique visitors I've received on my blog for the past month during certain times and days of the week. Take it for a whirl:</p>
+<p><iframe src="https://plot.ly/~carlvlewis/13/average-unique-visitors-to-carlvlewisnet-jan-jun-2014/" width="100%" height="350" frameborder="no" scrolling="no"></iframe></p>
+<p>Not bad for a completely free, collaborative, easy-to-teach tool, huh? It's no <a href="http://d3.js" target="_blank">d3.js</a>, but it does the job quite nicely. Especially when it comes to saving time writing out complicated Excel formulas.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//blog/2014/06/16/making-case-post-platform-journalism/">
+        Making the case for the "post-platform" journalist
+      </a>
+    </h1>
+
+    <span class="post-date">16 Jun 2014</span>
+
+    <p><script class="speakerdeck-embed" src="//speakerdeck.com/assets/embed.js" async="" data-id="de2e5100d6f10131602d461b2c9fe8fa" data-ratio="1.77777777777778"></script><br />
+Yesterday, I presented a five-minute lightning talk at the <a href="http://ccj.mercer.edu">Center for Collaborative Journalism</a> on what I'm tentatively calling the "post-platform" journalist. From "print journalist", to "data journalist", to "multimedia journalist" and even to "social journalist," it seems as though the qualifiers that often get placed before the word "journalist" abound in almost cliche numbers. Each of these "types" of journalism typically seek to clarify the <em>platform </em>in which the individual tells the story rather than the content of the story itself. But in an era of information abundance and the democratization of publishing, we've seen the rapid rise of almost <em>limitless</em> numbers of platforms that require a range of almost <em>limitless</em> skills.<!--more--></p>
+<p>Journalism as a discipline has also expanded beyond traditional industrialized roles to encompass nontraditional forms of community information-dissemination and engagement, including community bloggers, content marketing experts, data scientists and entrepreneurs.</p>
+<p>Hence why I think it's time we get past the notion of "platforms." Instead of terms such as "cross-platform journalist" or "multimedia journalist," it now seems more appropriate to ditch the qualifiers altogether for a term that reflects the single overarching goal of all journalists: To focus on telling the story in the most effective way possible, and not get caught up with the platforms from which we tell them.</p>
+<p>Thoughts?</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//blog/2014/05/31/quick-life-update-and-introducing-borrow-ly-my-next-adventure/">
+        My recent family loss, and introducing Borrow.ly, my next adventure
+      </a>
+    </h1>
+
+    <span class="post-date">31 May 2014</span>
+
+    <p>In the long-overdue 7 months since I last posted here, I've gone through <a href="http://carlvlewis.tumblr.com/post/83499686044/coming-to-terms-with-the-harsh-heartbreaking-reality" target="_blank">one of the most difficult situations of my life</a> – one which I'm not seeking your sympathy for, and also not embarrassed to admit the depression the loss brought on.  I'll leave all <a href="http://carlvlewis.tumblr.com/post/83499686044/coming-to-terms-with-the-harsh-heartbreaking-reality" target="_blank">that stuff</a> to Tumblr for you to read should you wish</p>
+<p><!--more--></p>
+<p>[su_quote cite="Kristine Lily"]It's not how hard you fall, but how fast you get back on your feet.[/su_quote]</p>
+<p>It's taken me four months to reach a point of personal acceptance at mom's loss, but I'm already <a href="http://borrowly.com" target="_blank">jumping up</a>. A quotation that went viral on social media after the loss of legendary southern poet Maya Angelou this week cemented my will to get back up, and do so with no inhibitions. Courtesy of <a href="http://www.buzzfeed.com/krystieyandoli/maya-angelou-quotes-that-will-inspire-you-to-be-a-better?sub=2993524_2421512" target="_blank">this comforing and value-added BuzzFeed listicle</a>:</p>
+<p>[caption id="attachment_3841" align="aligncenter" width="222"]<a href="http://carlvlewis.net/wp-content/uploads/2014/05/enhanced-12185-1392074519-6.jpg"><img class=" wp-image-3841" src="/assets/enhanced-12185-1392074519-6.jpg" alt="Fred Brown / Getty Images" width="222" height="319" /></a> Fred Brown / Getty Images[/caption]</p>
+<p>[su_divider]</p>
+<p>My work on <a href="http://borrow.ly" target="_blank">borrow.<span style="text-decoration: underline;">ly</span></a>  – a first-of-its-kind  geofenced neighborhood household item-sharing platform – has already received positive feedback regarding its business model, both from <a href="http://quantummedia.com/Our_Team/Principals/Ava_Seave/" target="_blank">Ava Seave</a> of Quantum Media and Columbia Business School, and from NYC tech-startup collectives such as StartupBoost, which <a href="http://www.meetup.com/Startup-Boost-New-York-City/events/174201502/" target="_blank">recently listed</a> borrow.ly as "one of the hottest startups in Silicon Alley."  Check out the gallery below to get a sneak-peek at what's to come:</p>
+<p>[gallery ids="3842,3848,3845,3847,3844,3843"]</p>
+<p>Oh, and did I mention I start a Data Science with Python course at<a href="%20http://GeneralAssemb.ly" target="_blank"> GeneralAssemb.ly</a> Tuesday? Looking forward to learning even more as I build borrow.ly out.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//blog/2013/11/11/so-long-savannah-and-a-new-entrepreneurial-path/">
+        So long, Savannah, and a new entrepreneurial path
+      </a>
+    </h1>
+
+    <span class="post-date">11 Nov 2013</span>
+
+    <img src="/assets/Screen-Shot-2014-04-22-at-2.29.34-AM1.png">
+<p><em>Perhaps my favorite Instagram shot ever snapped for the <a href="http://instagram.com/savannahnow" target="_blank">@savannahnow</a> Instagram account, which we grew to nearly 2,000 followers in a year's time.</em></p>
+<p style="text-align: left;">This week, I put in my two weeks' notice at Savannah's <a href="http://savannahnow.com" target="_blank">Morning News Media</a> and our parent company, <a href="http://morris.com" target="_blank">Morris Publishing Group</a>, to move back after the holiday to New York City to join an up-and-coming NYC-based startup.</p>
+<p style="text-align: left;">In my year-and-a-half at the helm of the SMN's digital content and product development strategies, including launching <a href="http://dosavannah.com" target="_blank">dosavannah.com</a>, I learned invaluable management skills, conflict resolution and the courage to push fearlessly for innovation, even when tradition and red tape got in the way. <!--more-->I also had the pleasure of leading an incredibly talented team of digital journalists, including <a href="http://janaykingsberry.com">Janay Kingsberry</a> and <a href="http://twitter.com/catiemafera">Catie Mafera</a>, as well as working underneath media disruption visionaries such as <a href="https://www.linkedin.com/pub/craig-sims/3/523/496">Craig Sims</a> and <a href="http://yelvington.com">Steve Yelvington</a>; talented digital marketers such as <a href="https://www.linkedin.com/profile/view?id=2054314&amp;authType=NAME_SEARCH&amp;authToken=8qGQ&amp;locale=en_US&amp;srchid=953588771398146313327&amp;srchindex=1&amp;srchtotal=63&amp;trk=vsrp_people_res_name&amp;trkInfo=VSRPsearchId%3A953588771398146313327%2CVSRPtargetId%3A2054314%2CVSRPcmpt%3Aprimary" target="_blank">Stacy Jennings</a> and <a href="https://twitter.com/jhaymanPR" target="_blank">Jessica Hayman</a>; and tireless sales professionals working around-the-clock to develop new revenue streams for local news, such as <a href="https://www.linkedin.com/profile/view?id=41178946&amp;locale=en_US&amp;trk=tyah&amp;trkInfo=tarId%3A1398146633026%2Ctas%3Arachel%20gardner%2Cidx%3A1-1-1" target="_blank">Rachel Gardner</a> and Laura Ray Wearren.</p>
+<p style="text-align: left;">But the innovator's bug has been itching worse and worse lately, pushing me to expand my skill-set and programming abilities at a more rapid pace. While family issues landed me in Savannah originally following the <a href="http://www.theblacksheartimes.com/articles/2012/03/18/obituaries/doc4f662f194f297177971782.txt" target="_blank">death of my dad </a>in May 2012, my mom and I have had nearly a year-and-a-half to heal, and it's time for my next chapter. Given NYC's burgeoning tech/entrepreneurial scene, I finally decided this week to make a leap of faith into the big data startup community, as well as (possibly) explore new ways of building stronger, more informed communities.</p>
+<p style="text-align: left;">I'll keep you posted.</p>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page2">Older</a>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

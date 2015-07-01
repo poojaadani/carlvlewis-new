@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Using CartoDB 2.0 to geocode private prisons in comparison to state-by-state incarceration rates &middot; Lanyon
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+    <a class="sidebar-nav-item" href="">GitHub project</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Lanyon</a>
+            <small>A Jekyll theme</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Using CartoDB 2.0 to geocode private prisons in comparison to state-by-state incarceration rates</h1>
+  <span class="post-date">16 Jul 2014</span>
+  <img src="/assets/Screen-Shot-2014-08-20-at-11.21.51-AM.png">
+<p>The <a href="http://carlvlewis.net/visualizing-latest-census-estimates-using-cartodb-and-leaflet/" target="_blank">last post</a> I wrote about <a href="http://cartodb.com" target="_blank">CartoDB </a>used the CartoDB API and <a href="http://leaflet.js" target="_blank">Leaflet.js</a> to produce a hover tooltip map of census data. Looking back, while it's quite useful to learn CartoDB's API, it's now possible to achieve those same visual cues and interactivity without spending time wading through complex, undocumented JavaScript. You can now do everything I did <a href="http://carlvlewis.net/visualizing-latest-census-estimates-using-cartodb-and-leaflet/" target="_blank">here</a> using little more than CartoDB's frontend CMS.<!--more--></p>
+<p>So, when I ran across <a href="https://www.dropbox.com/s/arkyewfj6z5psa6/enigma-enigma-prisons-all-facilities-7215ee9c7d9dc229d2921a40e899ec5f%20%281%2906.03.01%20AM.csv" target="_blank">this database </a>of all prisons and correctional facilities in the nation on <a href="http://enigma.io" target="_blank">Enigma.io</a>, I used the dataset to put together this visualization displaying all 137 <em>private </em>prisons and correctional facilities – all of which are  owned entirely by just five different private enterprises – and then added a simple chloropleth layer displaying incarceration rates by state underneath.</p>
+<p>Can't see what's going on too well at the resolution below? Here's a standalone package:<br />
+[su_heading size="25"]<a href="http://carlvlewis.net/private-prisons" target="_blank">Click here to view the project live</a>[/su_heading]<br />
+<em>(yes, it's responsive!)</em></p>
+<p><iframe src="//carlvlewis.cartodb.com/viz/d785d444-0cb0-11e4-b8bc-0e230854a1cb/embed_map?title=false&amp;description=false&amp;search=false&amp;shareable=true&amp;cartodb_logo=true&amp;layer_selector=true&amp;legends=true&amp;scrollwheel=true&amp;fullscreen=true&amp;sublayer_options=1%7C1&amp;sql=&amp;zoom=3&amp;center_lat=37.92686760148135&amp;center_lon=-85.869140625" width="100%" height="520" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><em><br />
+</em><br />
+This visualization is a case in which deeper statistical analysis and consideration of multiple variables would've bolstered the possible argument that private prisons lead to higher incarceration rates, if such a claim is true, that is (i.e., determining a statistically significant correlation between number of inmates in each state with the number of private prisons or correctional facilities located there). <!--more--></p>
+<p>Such a <a href="http://journal.radicalcriminology.org/index.php/rc/article/view/44/html" target="_blank">data-driven study of the private prison industry </a>conducted by U.C. Berkely Ph.D. student Chris Petrella concluded that blacks are disproportionately incarcerated in private prisons as opposed to public jails.</p>
+<p>A similar methodology could be applied to private prison populations in general, as many private prisons are required by state or local law to have a minimum quota of around 90 to 95 percent occupancy to keep their government contracts. It would be interesting, too, to visualize that data in a manner more easily accesible to the average user than an academic research journal.</p>
+<h2><strong>Tools I would've used before new CartoDB:</strong></h2>
+<ul>
+<li>Batch geocode by <a href="http://www.findlatitudeandlongitude.com/batch-geocode/#.U8ZZY41dUd9" target="_blank">findlatitudelongitude</a> to geocode the address data into lat/long coordinates.</li>
+<li><a href="http://colorbrewer2.org" target="_blank">ColorBrewer2.org </a>to find equidistant color scales.</li>
+<li>Locating .shp, .kml or .geojson polygons for the U.S. states.</li>
+<li>Excel to merge tables and bind geographic with numeric data.</li>
+<li>A custom JavaScript powered control panel – like <a href="http://multimedia.savannahnow.com/media/restaurants/maps/savannahchatham.html#.U8Zbg41dUd8" target="_blank">the one I used here</a> – to categorize the locations by owner.</li>
+<li>Leaflet.js</li>
+<li>MapBox</li>
+<li>Who knows?</li>
+</ul>
+<h3>All of those tasks are automated in the new CartoDB!</h3>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/blog/2014/07/04/using-plotly-analyze-visualize-data-variety-interactive-charts-graphs/">
+            Using plotl.y to analyze and visualize data in variety of interactive charts, graphs
+            <small>04 Jul 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/2014/06/16/making-case-post-platform-journalism/">
+            Making the case for the "post-platform" journalist
+            <small>16 Jun 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/2014/05/31/quick-life-update-and-introducing-borrow-ly-my-next-adventure/">
+            My recent family loss, and introducing Borrow.ly, my next adventure
+            <small>31 May 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

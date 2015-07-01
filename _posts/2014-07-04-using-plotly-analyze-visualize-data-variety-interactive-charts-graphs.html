@@ -1,0 +1,38 @@
+---
+layout: post
+title: Using plotl.y to analyze and visualize data in variety of interactive charts,
+  graphs
+date: 2014-07-04 14:11:03.000000000 +05:30
+categories:
+- Blog
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '4'
+  _publicize_twitter_user: ! '@carlvlewis'
+  _wpas_done_all: '1'
+  _wpas_skip_5012411: '1'
+  _wpcom_is_markdown: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1435175389;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2742;}i:1;a:1:{s:2:"id";i:1967;}i:2;a:1:{s:2:"id";i:2557;}}}}
+  name: Using plotl.y to analyze and visualize data in variety of interactive charts,
+    graphs
+  dsq_thread_id: '3584086871'
+author:
+  login: cvlewis
+  email: carl@carlvlewis.net
+  display_name: Carl V. Lewis
+  first_name: Carl V.
+  last_name: Lewis
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~carlvlewis/6.embed?width=640&height=480"></iframe></p>
+<p>It's been a while since I've had the leisure to play with new <a href="https://github.com/carlvlewis/carlvlewis.github.com-fltimesunion/commit/0f38d526650b24a006f94a3d5549b3a64248a917?short_path=77062ad#diff-77062ade2810a886dd4dc035a83ed744">open-source tools for data journalism.</a> It's been even longer since I've written a tutorial. Today I wanted to explore a fairly WYSIWYG web app <a href="http://plotly.com" target="_blank">Plotly</a>. Although most of the features on face value appear to be not much more than what you can do in Google Visualization Playground or an open-source library like Highcharts.js – basic chart types on-the-fly, hover interactions – what particularly stands out about Plotly is its ability to perform many of the statistical analyses to your dataset before you go through the process of visualizing it.</p>
+<p>For example, you can calculate percent change from a set of chronological raw numbers to display accurate trend data by simply choosing "Data Analysis&gt;Percent Change" in the Grid View. I tried this out with some historical data scraped by the folks at <a href="http://enigma.io" target="_blank">enigma.io</a> on the percentage of the Savannah-area workforce in the hospitality industry, even adding in a fit or "trend" line to verify the upward tick:<br />
+<!--more--><br />
+As you can see, plot.ly lets the user easily add in annotations explaining the data. Granted, this could be accomplished using <a href="http://highcharts.js" target="_blank">other tools</a>, as well, but not so seamlessly. The user interface is a little cumbersome, and is still in beta. But judging by my experiences, this is a quicker solution than a JavaScript library and a more feature-rich choice than Google Charts.</p>
+<p>Just to give you an idea of the full range of more than 45 different standard chart types, I put together this slick heat map displaying the average unique visitors I've received on my blog for the past month during certain times and days of the week. Take it for a whirl:</p>
+<p><iframe src="https://plot.ly/~carlvlewis/13/average-unique-visitors-to-carlvlewisnet-jan-jun-2014/" width="100%" height="350" frameborder="no" scrolling="no"></iframe></p>
+<p>Not bad for a completely free, collaborative, easy-to-teach tool, huh? It's no <a href="http://d3.js" target="_blank">d3.js</a>, but it does the job quite nicely. Especially when it comes to saving time writing out complicated Excel formulas.</p>

@@ -1,0 +1,41 @@
+---
+layout: shortcodesultimate
+title: ! 'Demo shortcode #3: PHP echo code example'
+date: 2015-03-26 11:58:01.000000000 +05:30
+categories: []
+tags: []
+status: publish
+type: shortcodesultimate
+published: true
+meta:
+  sumk_attr: YTowOnt9
+  sumk_name: ! 'Demo shortcode #3: PHP echo code example'
+  sumk_slug: demo_shortcode_3
+  sumk_desc: ! 'This shortcode is more complex than shortcodes #1 and #2. This example
+    will show you how to use PHP echo mode, as well as how to use several different
+    types of attributes'
+  sumk_content: Default content
+  sumk_icon: http://carlvlewis.net/wp-content/plugins/shortcodes-ultimate-maker/assets/images/demo-3.png
+  sumk_code_type: php_echo
+  sumk_code: ! '$styles = array(&#039;info&#039;, &#039;error&#039;, &#039;success&#039;);
+
+    $colors = array(&#039;#09c&#039;, &#039;#f03&#039;, &#039;#6c3&#039;);
+
+    $color = str_replace($styles, $colors, $style);
+
+    $size = round($size * 1.4 + 9);
+
+    echo &#039;&lt;div style=&quot;background: &#039; . su_hex_shift($color, &#039;lighter&#039;,
+    40) . &#039;;color:&#039; . su_hex_shift($color, &#039;darker&#039;, 40) . &#039;;font-size:&#039;
+    . $size . &#039;px;margin:0 0 1.5em;padding:&#039; . $size . &#039;px&quot;&gt;&#039;
+    . $content . &#039;&lt;/div&gt;&#039;;'
+author:
+  login: cvlewis
+  email: carl@carlvlewis.net
+  display_name: Carl V. Lewis
+  first_name: Carl V.
+  last_name: Lewis
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+

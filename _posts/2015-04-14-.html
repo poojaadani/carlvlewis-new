@@ -1,0 +1,43 @@
+---
+layout: post
+title: ''
+date: 2015-04-14 09:15:44.000000000 +05:30
+categories:
+- Blog
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  name: ''
+  _jetpack_related_posts_cache: a:0:{}
+  _edit_last: '4'
+  _wpcom_is_markdown: '1'
+author:
+  login: cvlewis
+  email: carl@carlvlewis.net
+  display_name: Carl V. Lewis
+  first_name: Carl V.
+  last_name: Lewis
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="d3js.org">Data-Driven Documents</a><span style="line-height: 1.5;">, or D3 for short, is a new visualization library to build visualizations in SVG. But in my opinion, it's also the best javascript multipurpose SVG library when it comes to animation, interaction and above all for binding data to graphics. The </span><a style="line-height: 1.5;" href="https://groups.google.com/forum/#!forum/d3-js">community</a><span style="line-height: 1.5;"> is very responsive, </span><a style="line-height: 1.5;" href="https://github.com/mbostock/d3">source code</a><span style="line-height: 1.5;"> is very clean and the </span><a style="line-height: 1.5;" href="http://mbostock.github.com/d3/api/">API</a><span style="line-height: 1.5;"> is well written. There is not a lot of </span><a style="line-height: 1.5;" href="https://github.com/mbostock/d3/wiki">tutorials</a><span style="line-height: 1.5;"> to learn D3 yet. But they are very good introductions and you can find plenty of </span><a style="line-height: 1.5;" href="https://github.com/mbostock/d3/tree/master/examples">examples</a><span style="line-height: 1.5;"> packaged with the source code or hidden in forums. But if you know SVG, you already have a big head start. My goal was to write a simple introductory tutorial covering the main aspects of D3, with very trivial examples but with full length snippets for you to be up and running right now. So open your favorite editor, a decent browser and be ready to copy-paste.</span></p>
+<p>Let's start with a simple D3 example. It's an html file with a simple <a href="http://www.w3schools.com/html5/tag_doctype.asp">html5 doctype</a>. The D3 script will be loaded directly from the <a href="https://github.com/mbostock/d3">D3 repository</a>, but you could as well <a href="https://github.com/mbostock/d3/zipball/master">download a copy</a> and load it locally. I've placed a <code>&lt;div&gt;</code>tag to be used as a container for our visualization. The D3 script lay down just before the closing <code>&lt;/body&gt;</code> tag to be sure the page is fully loaded and ready to work with, and according to <a href="http://developer.yahoo.com/performance/rules.html#js_bottom">best practices</a>. This example shows the use of D3 for <a href="http://www.w3schools.com/htmldom/default.asp">DOM</a> traversal, for adding <a href="http://www.w3schools.com/svg/svg_intro.asp">SVG</a> and HTML elements, for adding styles and attributes and for mouse<a href="http://www.w3schools.com/jsref/dom_obj_event.asp">events</a> binding. Just copy-paste this example in a file named "index.html" opened in your favorite editor and in a recent browser. You can then replace the javascript code by any snippets found in this tutorial.</p>
+<p>[syntax_prettify linenums="linenums"]<script src="http://mbostock.github.com/d3/d3.js" type="text/javascript"></script></p>
+<div id="viz"><span class="doctype">&lt;!DOCTYPE html&gt;</span> <span class="tag">&lt;<span class="title">html</span>&gt;</span> <span class="tag">&lt;<span class="title">head</span>&gt;</span> <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://mbostock.github.com/d3/d3.js"</span>&gt;</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span> <span class="tag">&lt;/<span class="title">head</span>&gt;</span> <span class="tag">&lt;<span class="title">body</span>&gt;</span> <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"viz"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span> <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"> <span class="keyword">var</span> sampleSVG = d3.select(<span class="string">"#viz"</span>) .append(<span class="string">"svg"</span>) .attr(<span class="string">"width"</span>, <span class="number">100</span>) .attr(<span class="string">"height"</span>, <span class="number">100</span>); sampleSVG.append(<span class="string">"circle"</span>) .style(<span class="string">"stroke"</span>, <span class="string">"gray"</span>) .style(<span class="string">"fill"</span>, <span class="string">"white"</span>) .attr(<span class="string">"r"</span>, <span class="number">40</span>) .attr(<span class="string">"cx"</span>, <span class="number">50</span>) .attr(<span class="string">"cy"</span>, <span class="number">50</span>) .on(<span class="string">"mouseover"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>d3.select(<span class="keyword">this</span>).style(<span class="string">"fill"</span>, <span class="string">"aliceblue"</span>);}) .on(<span class="string">"mouseout"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>d3.select(<span class="keyword">this</span>).style(<span class="string">"fill"</span>, <span class="string">"white"</span>);}); </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span> <span class="tag">&lt;/<span class="title">body</span>&gt;</span> <span class="tag">&lt;/<span class="title">html</span>&gt;</span></div>
+<p><script type="text/javascript">// <![CDATA[<br />
+    var sampleSVG = d3.select("#viz")<br />
+        .append("svg")<br />
+        .attr("width", 100)<br />
+        .attr("height", 100);    </p>
+<p>    sampleSVG.append("circle")<br />
+        .style("stroke", "gray")<br />
+        .style("fill", "white")<br />
+        .attr("r", 40)<br />
+        .attr("cx", 50)<br />
+        .attr("cy", 50)<br />
+        .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})<br />
+        .on("mouseout", function(){d3.select(this).style("fill", "white");});</p>
+<p>// ]]></script>[/syntax_prettify]</p>
+<p>&nbsp;</p>

@@ -1,0 +1,43 @@
+---
+layout: post
+title: Using data-viz to make a wire story stand out from the pack
+date: 2012-05-07 01:14:13.000000000 +05:30
+categories:
+- Data Visualization
+- Data Visualization Thoughts
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  image: ''
+  quote-author: Unknown
+  quote-url: http://
+  quote-copy: Unknown
+  audio: http://
+  link-url: http://
+  seo_follow: 'false'
+  seo_noindex: 'false'
+  _thumbnail_id: '2554'
+  tmac_last_id: '232333251400847360'
+  pvc_views: '1513'
+  _wpas_skip_5012411: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1435672375;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:1967;}i:1;a:1:{s:2:"id";i:2422;}i:2;a:1:{s:2:"id";i:1103;}}}}
+author:
+  login: cvlewis
+  email: carl@carlvlewis.net
+  display_name: Carl V. Lewis
+  first_name: Carl V.
+  last_name: Lewis
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="http://carlvlewis.net/introducing-the-new-dosavannah-com-and-do-mobile-app/"><img class=" wp-image-3841" src="{{ site.baseurl }}/assets/Screen-Shot-2012-05-07-at-1.15.51-AM.png" alt="Fred Brown / Getty Images" /></a>
+    I've been interested lately in finding examples of online-only, collaborative, non-profit newsrooms who've utilized the power of data visualization techniques to give added value to stories that otherwise wouldn't necessarily be unique, and in doing so beat out legacy news organizations who published a text narrative alone. Take, for example, this <a href="http://www.njspotlight.com/stories/12/0503/1747/">data-rich story</a> and interactive map displaying statewide testing results published by <a href="http://njspotlight.com">NJSpotlight</a> Friday. While the news that only 8 out of 10 graduating seniors had passed New Jersey's current standardized test in 2011 was widely reported across the state last week, including by the<em><a href="http://www.nj.com/news/index.ssf/2012/05/nj_high_school_graduation_rate_1.html"> Star-Ledger</a></em> in Newark and by <em><a href="http://www.pressofatlanticcity.com/news/breaking/high-school-graduation-rates-have-dropped-statewide-under-new-formula/article_051bca92-93d9-11e1-a20c-001a4bcf887a.html">The Press of Atlantic City</a></em>, only NJSpotlight took advantage of the story's strong data element to produce a more concise, data-driven visual narrative.<br />
+<!--more--></p>
+<p>So NJSpotlight obviously deserves kudos for the gap they're filling in New Jersey journalism. What's more, the job they did on the <a href="http://www.njspotlight.com/stories/12/0503/1747/">interactive map</a> was fairly sophisticated (I've still yet to figure out how to overlay such a highly customized legend onto a Google map). But as is always the case with any deadline project, there's room for improvement. Let's take a look at the good and the bad of NJSpotlight's Friday package on state test results.</p>
+<p>First off, this is a classic example of a story where county and/or municipality polygons with a colored fill layered on top of a Google Map brings new insight to a widely reported story. Not only can we immediately see from the map that most of the state fell within the 75 to 90 percent range in terms of passing rates, but we can also clearly tell that the north-central region of the state, particularly near the Pennsylyvania border, earned significantly higher scores than the rest of New Jersey. The pop-up table with information on vocational and charter schools also adds an additional layer of nuance to the piece, and does a decent job of displaying the numbers in a table-like format.</p>
+<p>The map colors follow a somewhat logical pattern, with green representing high-passing rates and red representing lower passing rates. But the orange, yellow and blue colors that fall in the middle do more to obfuscate than they do to help visualize. Without referencing the legend, how is the user supposed to know that blue is better than yellow, or that green is better than blue? What's more, the combination of such bright shades of colors from opposite ends of the color spectrum makes the map less pleasing on the eye than it would've been had the designer chosen more subtle, complimentary shades. I understand the desire to have red represent 'negative' and green represent 'positive,' but if NJSpotlight had went with a graduated color scale from red to green, with neutral-based mid-values such as the ones I used in <a href="http://carlvlewis.net/?p=2024">this recent map</a> on nationwide obesity rates, the map would've been not only aesthetically more appealing, but easier to read.</p>
+<p>Another minor criticism I could make of the map is the designer's decision to set the polygon-fills to solid colors with 100 percent opacity. This obscures the underlying view of which cities and townships each shape contains. While I understand the thought-process that likely went into this decision – it's hard to make disparate colors, especially orange and yellow, stand out when layered on a slightly orange-tinted map with road and highway features – the designer could have easily used a tool such as <a href="http://colorbrewer2.org/">colorbrewer2.org</a> to generate some nice equidistant colors that would've looked fine set to an opacity of about 50 or 60 percent.</p>
+<p>For the sake of thoroughness, I also want to address the included table that contains the charter and vocational school data. I like the fact that NJSpotlight chose to alternate the shades of background color for every other row in the table. It helps distinguish each row more easily from its neighbor, and gives an extra visual attribute to what easily could have been a stale grid. My only recommendations might be to split up every five or six rows with a dividing line, and to incorporate a bar chart, if possible, for one of the values in the cell (presumably, the most important value, the percent passing column).</p>

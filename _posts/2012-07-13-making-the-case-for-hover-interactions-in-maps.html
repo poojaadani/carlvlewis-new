@@ -1,0 +1,51 @@
+---
+layout: post
+title: Making the case for hover interactions in maps
+date: 2012-07-13 02:38:34.000000000 +05:30
+categories:
+- Blog
+- Data Visualization
+tags:
+- chloropleth
+- hover
+- mapbox
+- mapping
+- mouseover
+- QGis
+- tilemill
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _thumbnail_id: '2985'
+  image: http://carlvlewis.net/wp-content/uploads/2012/07/Screen-Shot-2012-07-13-at-2.23.02-AM.png
+  quote-author: Unknown
+  quote-url: http://
+  quote-copy: Unknown
+  audio: http://
+  link-url: http://
+  seo_follow: 'false'
+  seo_noindex: 'false'
+  tmac_last_id: ''
+  pvc_views: '5177'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1435110367;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3030;}i:1;a:1:{s:2:"id";i:2422;}i:2;a:1:{s:2:"id";i:2742;}}}}
+  dsq_thread_id: '3580780447'
+author:
+  login: cvlewis
+  email: carl@carlvlewis.net
+  display_name: Carl V. Lewis
+  first_name: Carl V.
+  last_name: Lewis
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="http://carlvlewis.net/introducing-the-new-dosavannah-com-and-do-mobile-app/"><img class=" wp-image-3841" src="{{ site.baseurl }}/assets/Screen-Shot-2012-05-06-at-9.28.14-PM.png" alt="Fred Brown / Getty Images" /></a>
+    In keeping with my recent spate of mapping nerdiness, I decided to take an <a href="http://carlvlewis.net/?p=2742">interactive map</a> I produced last month displaying statewide annual population changes a step further by adding mouseover/hover capabilities. <!--more-->Here's the <a href="http://carlvlewis.net/?portfolio=interactive-statewide-population-change-between-2010-and-2011">hover-y, nicely-colored chloropleth map</a> I came up with. But before I get into the nitty-gritty of how I created the map –– which I'll explain step-by-step in a later post –– let me exercise a bit of self-indulgence by defending my growing belief in the need for hover capabilities when visualizing geographic data.</p>
+<p>Not too long ago, I was an avid believer in the <a href="http://blog.apps.chicagotribune.com/2011/03/08/making-maps-1/">no-frills, less-interactivity-is-more approach</a> to mapping geographic data, espoused by the brilliant Brian Boyer (<a href="http://twitter.com/brianboyer">@brianboyer)</a>, News Applications Editor for NPR and a former member of the <a href="http://www.facebook.com/tribapps">News Apps Team</a> at <em>The Chicago Tribune</em>. Boyer's <a href="http://blog.apps.chicagotribune.com/2011/03/08/making-maps-1/">argument</a> for the need to keep maps simple –– like they used to be back in the days of ink and paper –– certainly has its merits. After all, the process of bringing a physical map closer to one's eyes to get a better view is a natural, timeless user interaction, and maps like <a href="http://blog.apps.chicagotribune.com/2011/03/08/making-maps-1/">this one</a>, which Boyer produced during his time at <em>The Tribune</em>, are far more intuitive in communicating information upon first glance than many of the infoWindow-laden Google maps being produced by news organizations these days, many of them simply for the sake of being called 'interactive' (for those of you fortunate enough not to be mapping nerds, infoWindow is just Google-speak for the clickable popup boxes you see in Google maps).</p>
+<p>But Boyer's minimalist mapping aesthetic only really works when you have one or two pieces of textual data you want to display for each geographic area. What if you have multiple pieces of information you want to display for each polygon, such as in <a href="http://www.texastribune.org/texas-counties-and-demographics/census/on-the-records-majority-texas-minority-races/">this snazzy map</a> from The Texas Tribune? Or, less likely but equally problematic, what if you need to bind non-textual data to your geographic polygons, such as <a href="http://mapbox.com/wax/">images</a> or Google Charts?  In cases such as these, you're going to need to provide some sort of interaction that allows the user to expand and collapse the data for each area individually, or you'll just end up with a chronic case of visual overload.</p>
+<p>Not to mention, on a more abstract level, studies have repeatedly shown that users tend to spend more time on applications that provide direct feedback based upon their actions, even if that feedback sometimes makes their ability to consume information at first glance less efficient (see Donald Norman's 2005 book <em><a href="http://www.goodreads.com/book/show/841.Emotional_Design">Emotional Design: Why We Love (Or Hate) Everyday Things</a>, </em>in which Norman asserts that the feeling of emotional satisfaction and empowerment users receive from triggering an action not only puts them in a clearer state of mind, but also makes them more engaged in the information at hand). So, if we're trying to communicate geographic data to users as effectively as possible, it only makes sense that we'd want to have a certain degree of user interaction –– both for the sake of preventing visual overload and for making users feel more engaged. Such is the logic behind clickable infoWindows.</p>
+<p>Still, clickable popups leave us with another problem: Users have to make the conscious and deliberate effort to click a polygon to see the data for that geographic area. Requiring clicks may sound like a trivial task to the designer or journalist-programmer, but for the short-attention span user, it can be an awful lot to ask for. To be fair, however, click-triggered popups may not be much of a problem for maps with only a few dozen polygons. But for maps with hundreds of small polygons –– say, census tracts or zip codes –– it can be very tedious to click the right polygon without first having to zoom into the map so far that you lose sight of the broader context.</p>
+<p>That leads me back to a conversation I had a couple of months ago with a friend of mine from Columbia's J-School, Michael Keller (<a href="http://twitter.com/mhkeller">@mhkeller</a>), who's now working as the Senior Data Reporter at The Daily Beast. Michael insisted to me after a Hacks/Hacker event that providing hover interaction for maps is almost always a good thing, because hovers require less work on the part of the user. I'll admit that I was dubious at the time, thinking of hovers as often unwanted, accidental triggers that can be distracting to the map and data at hand. But lately I've come around to his way of seeing things. If implemented correctly (i.e. no flashy interactions that cover up other parts of the map), hovers are almost always a good idea. For example, <a href="http://thenewyorkworld.com/public/2012/may/nyw-hotspots-map/index.php">this</a> recent map of New York Stop-and-Frisk data that Keller produced for <a href="http://thenewyorkworld.com">The New York World</a> using CartoDB and Leaflet is so detailed that it couldn't possibly have worked without infoWindows, and would have been unwieldy if it relied on click-triggered interaction. By including floating mouseover capabilities, the map allows the user to scan quickly through the chloropleth map to see individual Stop-and-Frisk data from each block, without having to attempt to click through minute geographic areas.*</p>
+<p>I'm certainly not advocating interaction for interaction's sake (although such a case could be made, given the dynamics of the Web). But I am saying that hovers give more immediate visual feedback than click-triggered events, especially in maps. Hovers help draw users into the data without requiring them to seek it out consciously–– almost like a catchy lede would in a print narrative. So for the time-being, I'm pro-hover.</p>
+<p><em>*Keller later messaged me letting me know that some examples which better illustrate the power of hovers include <a href="http://www.thenewyorkworld.com/2012/01/10/redistricting/">this map</a> and <a href="http://blog.timesunion.com/capitol/archives/114554/2010-voting-patterns-2012-district-lines-bigger-majorities/">this map</a>, both of which use hover functionality to help highlight the effects of proposed redistricting efforts in the New York State Senate. What you'll also notice about Keller's maps is that they include hover states, which I also think is a necessity, especially for maps that include lots of small polygons.</em></p>
